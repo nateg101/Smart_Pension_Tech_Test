@@ -7,7 +7,7 @@ class WebserverParser
   end
 
   def most_views
-    create_visits.map { |k, v| "#{k} #{v[:all]} #{"visit"}" }
+    create_visits.map { |k, v| "#{k} #{v[:all]} #{"visits"}" }
   end
 
   private
