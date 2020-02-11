@@ -11,7 +11,7 @@ class WebserverParser
   end
 
   def unique_views
-    create_unique_visits.map { |k, v| "#{k} #{v[:unique]} #{"unique visits"}" }
+    create_unique_visits.map { |k, v| "#{k} #{v[:unique]} #{"unique views"}" }
   end
 
   private

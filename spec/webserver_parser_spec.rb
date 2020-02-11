@@ -28,18 +28,18 @@ describe WebserverParser do
   end
 
   context "listing of pages by unique views" do
-    it "returns '/contact 1 unique visits'" do
-      expect(single_unique_visit_parser.unique_views[1]).to eq('/contact 1 unique visits')
+    it "returns '/contact 1 unique views'" do
+      expect(single_unique_visit_parser.unique_views[1]).to eq('/contact 1 unique views')
     end
 
-    it "returns the correct count for multiple unique visits" do
-      expect(single_unique_visit_parser.unique_views).to include('/home 2 unique visits')
-      expect(single_unique_visit_parser.unique_views).to include('/contact 1 unique visits')
+    it "returns the correct count for multiple unique views" do
+      expect(single_unique_visit_parser.unique_views).to include('/home 2 unique views')
+      expect(single_unique_visit_parser.unique_views).to include('/contact 1 unique views')
     end
 
     it "orders the unique visits from highest to lowest" do
-      expect(single_unique_visit_parser.unique_views[0]).to eq('/home 2 unique visits')
-      expect(single_unique_visit_parser.unique_views[1]).to eq('/contact 1 unique visits')
+      expect(single_unique_visit_parser.unique_views[0]).to eq('/home 2 unique views')
+      expect(single_unique_visit_parser.unique_views[1]).to eq('/contact 1 unique views')
     end
   end
 
