@@ -16,6 +16,7 @@ list of webpages with most unique page views also ordered e.g.:
 2. Run `$ bundle install` to install gems.
 
 To run tests - `$ rspec`
+Test coverage - 100%, 44/44 lines covered.
 
 ### Usage
 
