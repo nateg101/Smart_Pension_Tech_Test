@@ -15,8 +15,13 @@ describe WebserverParser do
     end
 
     it "returns the correct count for multiple visits to pages" do
-      expect(multiple_visit_parser.most_views).to include('/help_page/1 2 visits')
+      expect(multiple_visit_parser.most_views).to include('/help_page/1 3 visits')
       expect(multiple_visit_parser.most_views).to include('/about/2 1 visits')
+    end
+
+    it "orders the visits from highest number of visits to lowest" do
+      expect(multiple_visit_parser.most_views[0]).to eq('/help_page/1 3 visits')
+      expect(multiple_visit_parser.most_views[1]).to eq('/home 2 visits')
     end
   end
 

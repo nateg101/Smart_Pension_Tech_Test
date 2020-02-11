@@ -7,7 +7,7 @@ class WebserverParser
   end
 
   def most_views
-    create_visits.map { |k, v| "#{k} #{v[:all]} #{"visits"}" }
+    most_views_array = create_visits.map { |k, v| "#{k} #{v[:all]} #{"visits"}" }
   end
 
   private
@@ -19,7 +19,7 @@ class WebserverParser
 
   def populate_hash(entries)
     @logfile.each { |line| entries[line.split(' ')[0]][:all] += 1 }
-    entries
+    entries.sort_by { |k, v| v[:all] }.reverse
   end
 
 end
